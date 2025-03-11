@@ -44,13 +44,13 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-"django.middleware.security.SecurityMiddleware",
    ]
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
@@ -124,10 +124,26 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR , "media")
-MEDIA_URL = "/media/"
+MEDIA_URL = "media/"
 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# open console
+# git clone 
+# pip install -r requirements.txt
+#Source code => /home/amira121/django-git/ecommerce 
+# Working directory => /home/amira121/django-git
+# in wsgy file
+# import os
+# import sys
+# path = '/home/amira121/django-git/ecommerce'
+# if path not in sys.path:
+#     sys.path.append(path)
+# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ecommerce.settings')
+
+# from django.core.wsgi import get_wsgi_application
+# application = get_wsgi_application()
